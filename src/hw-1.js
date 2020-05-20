@@ -7,7 +7,7 @@ function task1(num1, num2, str) {
   // ваш код должен быть ниже этой строки
 
   str = Number(str);
-  if (str <= 0 ||str >= 0) {
+  if (str <= 0 || str >= 0) {
     sum = num1 + num2 + str;
   } else {
     sum = 'неверные данные';
@@ -16,7 +16,7 @@ function task1(num1, num2, str) {
   // ваш код должен быть выше этой строки
   return sum;
 }
- 
+
 console.log(task1(3, 2, '14'));
 console.log(task1(1, 1, '8'));
 console.log(task1(8, 5, 'ghh'));
@@ -45,28 +45,28 @@ function task2(age) {
   let result = null;
   // ваш код должен быть ниже этой строки
 
-  switch (age){
+  switch (age) {
     case 5:
     case 6:
     case 7:
-    case 8: 
-    result ='Он старше 5 лет';
+    case 8:
+      result = 'Он старше 5 лет';
       break;
-    case 9:  
-    case 10:  
+    case 9:
+    case 10:
     case 11:
-        result ='Он старше 8 лет';
-        break;
+      result = 'Он старше 8 лет';
+      break;
     case 12:
     case 13:
     case 14:
     case 15:
     case 16:
     case 17:
-        result = 'Он старше 11 лет';
-        break;
+      result = 'Он старше 11 лет';
+      break;
     default:
-        result = 'Нет подходящего возраста';        
+      result = 'Нет подходящего возраста';
   }
 
   // ваш код должен быть выше этой строки
@@ -85,10 +85,10 @@ function task3() {
   let result = 0;
   // ваш код должен быть ниже этой строки
   let i = 0
-  while (i<21) {
-    if(i % 2) {
-    result += i
-  }
+  while (i < 21) {
+    if (i % 2) {
+      result += i
+    }
     i++
   }
   // ваш код должен быть выше этой строки

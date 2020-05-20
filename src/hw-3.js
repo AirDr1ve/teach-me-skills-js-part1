@@ -7,16 +7,14 @@
  *  "Aaret64ip" => true
  */
 function task1(str) {
-  
-  for( let b = 0; b < str.length; b++)
-  {
-   if (str.split(str[b]).length-1 > 1) 
-   {
-    return false;
-   }    
+
+  for (let b = 0; b < str.length; b++) {
+    if (str.split(str[b]).length - 1 > 1) {
+      return false;
+    }
   }
   return true;
-  
+
 }
 
 console.log(task1('adv'));
@@ -38,8 +36,19 @@ function task2(str) {
  * arr массив чисел. Нужно найти в массиве найбольшое число и вернуть его
  */
 function task3(arr) {
+  let max = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  return max;
 
 }
+
+console.log(task3([3, 5, 1, 51]));
+console.log(task3([31, 512, 1541, 51]));
+
 
 /**
  * В функцию приходит объект obj. Нужно скопировать все его свойства в объект result и вернуть его
@@ -47,7 +56,7 @@ function task3(arr) {
 function task4(obj) {
   const result = {};
   // ваш код должен быть ниже этой строки
-
+  Object.assign(result, obj)
   // ваш код должен быть выше этой строки
   return result;
 }
@@ -59,7 +68,12 @@ function task4(obj) {
  */
 function task5(str) {
 
+  let result = str.replace(/(.).+ (.).+/, '$1. $2.');
+
+  return result
 }
+
+console.log(task5('Ilya Bogdanov'));
 
 /**
  * Написать логику, которая будет возвращать название планеты. По ее номеру начиная от ближайшей к солнцу.
@@ -73,5 +87,5 @@ function task6(num) {
  * Функция должна удалять первый и последний символы из строки str и вернуть получившеюся строку.
  */
 function task7(str) {
-
+ str.replace('characterToReplace', '');
 }
