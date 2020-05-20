@@ -106,10 +106,20 @@ console.log('----------------------');
  *
  */
 function task4() {
+
+
   // ваш код должен быть ниже этой строки
+  for (let i = 0; i < 100; i++)
+    if (!(i % 5))
+
+      console.log(5);
 
   // ваш код должен быть выше этой строки
+
 }
+
+task4()
+
 
 /**
  * В функцию приходят 4 аргумента все разных типов, какие бы не были значения результат всегда должен быть один и тот же, true
@@ -132,13 +142,19 @@ function task6(number) {
       // ваш код должен быть ниже этой строки
 
       result += i + j;
-
+        if (result >= number) {
+          result -= i+j
+        }
       // ваш код должен быть выше этой строки
     }
   }
 
   return result;
 }
+
+console.log(task6(8));
+console.log(task6(80));
+console.log(task6(458));
 
 
 /**
@@ -149,10 +165,24 @@ function task6(number) {
 function task7() {
   let result = null;
   // ваш код должен быть ниже этой строки
-
+for (let i = 0; i<10; i++)
+  if (i <= 1){
+    result = 'И'
+  } else if (i <= 2){
+    result += "л"
+  } else if (i <= 3){
+    result += "ь"
+  } else if (i <= 4){
+    result += "я"
+  
+  }  
+  
   // ваш код должен быть выше этой строки
   return result;
 }
+
+console.log(task7());
+
 
 
 /**
@@ -163,7 +193,12 @@ function task8(num) {
   let str = '10n';
   let result = null;
   // ваш код должен быть ниже этой строки
-
+  str = str.replace(/\D+/g, '') 
+  str = Number(str)
+  result = num * str
   // ваш код должен быть выше этой строки
   return result;
 }
+
+console.log(task8(5));
+console.log(task8(11));

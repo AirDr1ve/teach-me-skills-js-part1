@@ -31,3 +31,8 @@ const obj = {
   
   
   console.log(foo(obj));
+
+
+
+
+  

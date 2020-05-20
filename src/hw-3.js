@@ -87,5 +87,10 @@ function task6(num) {
  * Функция должна удалять первый и последний символы из строки str и вернуть получившеюся строку.
  */
 function task7(str) {
- str.replace('characterToReplace', '');
+  let result = ''
+  result = str.slice(1, -1)
+  return result
 }
+
+console.log(task7('123456789'));
+console.log(task7('abc'));
