@@ -163,10 +163,14 @@ function task7(obj) {
 function task8(obj, str) {
   let result = null;
   // ваш код должен быть ниже этой строки
-
+  obj.greeting = 'Hello';
+  result = obj.greeting + " " + str;
   // ваш код должен быть выше этой строки
   return result;
 }
+
+console.log(task8({}, 'Katya'));
+
 
 /**
  * Задание с *.
