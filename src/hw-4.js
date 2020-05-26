@@ -22,37 +22,29 @@ fibonacci(19)
 /**
  * Написать свою функцию map
  */
-function map(array, callback) {
-
-}
+function map(array, callback){
+    let arrayResault = [];
+    for ( let i = 0; i < array.length; i++) {
+      arrayResault[i] = callback(array[i]);
+    }
+    return arrayResault
+  }
+   console.log(map(['if', 'whay', 'house', 'street'], function(len){
+     return len.length
+   }));
+  
+   console.log(map([2, 10, 14, 24, 4], function(del){
+     return del/2
+  
+   }));
 
 /**
  * Написать свою функцию filter
  */
 function filter(array, callback) {
-
-    let someUsers = array.filter(item => item.id < 4);
-
-    return someUsers.length
+    let arrayResult = [];
+    
 }
-
-console.log(filter([{
-        id: 1,
-        name: 'Вася'
-    },
-    {
-        id: 2,
-        name: 'Петя'
-    },
-    {
-        id: 3,
-        name: 'Маша'
-    },
-    {
-        id: 4,
-        name: 'Катя'
-    }
-]));
 
 /**
  * Написать свою функцию indexOf
