@@ -50,13 +50,18 @@ function filter(array, callback) {
  * Написать свою функцию indexOf
  */
 function indexOf(array, value, fromIndex) {
+    let i = fromIndex ? fromIndex : 0;
+    for (; i < array.lenght; i++) {
+      if (array[i] === value) {
+        return i;
+      }
+    }
+    return -1;
+  }
+  
+  console.log(indexOf([7, 21, 283, 87], 7));
 
-  let result = array.indexOf(3)
-  return result
-}
 
-
-console.log(indexOf([2, 6, 8, 6, 37, 3, 5]));
 
 /**
  * Написать свою функцию reduce
@@ -78,7 +83,7 @@ console.log(reduce(['M', '1', 'N', 'S', 'K'], function(acc, value){
 function find(array, callback) {
   for (let i = 0; i < array.length; i++) {
     if (callback(array[i])) {
-      return 'число ' + array[i] + ' есть'
+      return  array[i] 
     }
   }
 }
@@ -93,8 +98,24 @@ console.log(find([10, 2, 3, 6], function (fin) {
  * Написать свою функцию sort
  */
 function sort(array, callback) {
-
-}
+    for (let i = 0; i < array.length; i++) {
+      for (let g = 0; g < array.length; g++) {
+          let first = array[g];
+          let second = array[g + 1];
+          if (callback(first, second)) {
+              array[g] = second;
+              array[g + 1] = first;
+          }
+      }
+  
+    }
+  return array;
+  }
+  
+  
+  console.log(sort([0, 5, 2, 6, 1, -2, 13], function (a, b) {
+    return a > b;
+  }));
 
 /**
  * Написать свою функцию Object.keys

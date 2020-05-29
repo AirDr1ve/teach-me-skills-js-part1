@@ -179,7 +179,7 @@ console.log(task8({}, 'Katya'));
 function task9() {
   const array = [];
   // ваш код должен быть ниже этой строки
-
+  array = [...arguments];
   // ваш код должен быть выше этой строки
   return array;
 }
