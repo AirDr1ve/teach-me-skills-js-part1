@@ -55,6 +55,16 @@ console.log(task3([3, 5, 1, 51]));
 console.log(task3([31, 512, 1541, 51]));
 
 
+
+function task3_2(arr) {
+  return Math.max(...arr)
+
+}
+
+console.log(task3_2([3, 5, 1, 51]));
+console.log(task3_2([31, 512, 1541, 51]));
+
+
 /**
  * В функцию приходит объект obj. Нужно скопировать все его свойства в объект result и вернуть его
  */
@@ -65,6 +75,18 @@ function task4(obj) {
   // ваш код должен быть выше этой строки
   return result;
 }
+
+function task4_2(obj) {
+  let result = {};
+  // ваш код должен быть ниже этой строки
+  result = {...obj}
+  // ваш код должен быть выше этой строки
+  return result;
+}
+
+
+console.log(task4_2({name: 2, text: 'sads'}));
+
 
 /**
  * Приходит строка str такого вида "Ivan Ivanov", вы должны сохранить первые символы в переменную result. Должен
@@ -85,60 +107,12 @@ console.log(task5('Ilya Bogdanov'));
  * Примечание: написать эту логику без if и switch!!!!!!!
  */
 function task6(num) {
-  while (num === 1){
-    return 'Mercury'
-  }
-  while (num === 2){
-    return 'Venus'
-  }
-  while (num === 3){
-    return 'Earth'
-  }
-  while (num === 4){
-    return 'Mars'
-  }
-  while (num === 5){
-    return 'Jupiter'
-  }
-  while (num === 6){
-    return 'Saturn'
-  }
-  while (num === 7){
-    return 'Uranus'
-  }
-  while (num === 8){
-    return 'Neptune'
-  }
-  while (num === 9){
-    return 'Pluto'
-  }
-  while (num <=0 || num >= 10  || num === undefined){
-    return 'There is no such planet'
-  }
+  let arr = [,'Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune','Pluto'];
+  return  arr[num];
 }
 
 
-console.log(task6(10));
-
-function task6_2(num) {
-  let result
-  result = num === 1 ? 'Mercury' 
-         : num === 2 ? 'Venus' 
-         : num === 3 ? 'Earth' 
-         : num === 4 ? 'Mars' 
-         : num === 5 ? 'Jupiter' 
-         : num === 6 ? 'Saturn' 
-         : num === 7 ? 'Uranus' 
-         : num === 8 ? 'Neptune'
-         : num === 9 ? 'Pluto'
-         : 'Planet not found'
-  
-  return result
-
-}
-
-
-console.log(task6_2(5));
+console.log(task6());
 
 /**
  * Функция должна удалять первый и последний символы из строки str и вернуть получившеюся строку.
