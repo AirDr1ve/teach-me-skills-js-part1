@@ -90,6 +90,12 @@ console.log(anagram('finder', 'Friends'))
 /**
  * Написать функцию, которая будет принимать число. Функция должна возвращать массив чисел, которые являются делителями.
  */
-function task5() {
-
-}
+function task5(num) {  
+    let result = [];  
+    for (var i = 1; i <= num; i++) {  
+      if(num % i === 0) {    
+        result.push(i);  
+      }  
+    }  return result; 
+  }
+  console.log(task5(24));
