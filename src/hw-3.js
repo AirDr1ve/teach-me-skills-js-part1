@@ -79,13 +79,18 @@ function task4(obj) {
 function task4_2(obj) {
   let result = {};
   // ваш код должен быть ниже этой строки
-  result = {...obj}
+  result = {
+    ...obj
+  }
   // ваш код должен быть выше этой строки
   return result;
 }
 
 
-console.log(task4_2({name: 2, text: 'sads'}));
+console.log(task4_2({
+  name: 2,
+  text: 'sads'
+}));
 
 
 /**
@@ -107,8 +112,8 @@ console.log(task5('Ilya Bogdanov'));
  * Примечание: написать эту логику без if и switch!!!!!!!
  */
 function task6(num) {
-  let arr = [,'Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune','Pluto'];
-  return  arr[num];
+  let arr = [, 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto'];
+  return arr[num];
 }
 
 

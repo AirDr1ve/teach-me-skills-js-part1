@@ -142,9 +142,9 @@ function task6(number) {
       // ваш код должен быть ниже этой строки
 
       result += i + j;
-        if (result >= number) {
-          result -= i+j
-        }
+      if (result >= number) {
+        result -= i + j
+      }
       // ваш код должен быть выше этой строки
     }
   }
@@ -165,18 +165,18 @@ console.log(task6(458));
 function task7() {
   let result = null;
   // ваш код должен быть ниже этой строки
-for (let i = 0; i<10; i++)
-  if (i <= 1){
-    result = 'И'
-  } else if (i <= 2){
+  for (let i = 0; i < 10; i++)
+    if (i <= 1) {
+      result = 'И'
+    } else if (i <= 2) {
     result += "л"
-  } else if (i <= 3){
+  } else if (i <= 3) {
     result += "ь"
-  } else if (i <= 4){
+  } else if (i <= 4) {
     result += "я"
-  
-  }  
-  
+
+  }
+
   // ваш код должен быть выше этой строки
   return result;
 }
@@ -193,7 +193,7 @@ function task8(num) {
   let str = '10n';
   let result = null;
   // ваш код должен быть ниже этой строки
-  str = str.replace(/\D+/g, '') 
+  str = str.replace(/\D+/g, '')
   str = Number(str)
   result = num * str
   // ваш код должен быть выше этой строки

@@ -50,16 +50,16 @@ function filter(array, callback) {
  * Написать свою функцию indexOf
  */
 function indexOf(array, value, fromIndex) {
-    let i = fromIndex ? fromIndex : 0;
-    for (; i < array.lenght; i++) {
-      if (array[i] === value) {
-        return i;
-      }
+  let i = fromIndex ? fromIndex : 0;
+  for (; i < array.lenght; i++) {
+    if (array[i] === value) {
+      return i;
     }
-    return -1;
   }
-  
-  console.log(indexOf([7, 21, 283, 87], 7));
+  return -1;
+}
+
+console.log(indexOf([7, 21, 283, 87], 7));
 
 
 
@@ -73,8 +73,8 @@ function reduce(array, callback, acc) {
   return acc
 }
 
-console.log(reduce(['M', '1', 'N', 'S', 'K'], function(acc, value){
- return acc = acc + value;
+console.log(reduce(['M', '1', 'N', 'S', 'K'], function (acc, value) {
+  return acc = acc + value;
 }, ''));
 
 /**
@@ -83,7 +83,7 @@ console.log(reduce(['M', '1', 'N', 'S', 'K'], function(acc, value){
 function find(array, callback) {
   for (let i = 0; i < array.length; i++) {
     if (callback(array[i])) {
-      return  array[i] 
+      return array[i]
     }
   }
 }
@@ -98,48 +98,56 @@ console.log(find([10, 2, 3, 6], function (fin) {
  * Написать свою функцию sort
  */
 function sort(array, callback) {
-    for (let i = 0; i < array.length; i++) {
-      for (let g = 0; g < array.length; g++) {
-          let first = array[g];
-          let second = array[g + 1];
-          if (callback(first, second)) {
-              array[g] = second;
-              array[g + 1] = first;
-          }
+  for (let i = 0; i < array.length; i++) {
+    for (let g = 0; g < array.length; g++) {
+      let first = array[g];
+      let second = array[g + 1];
+      if (callback(first, second)) {
+        array[g] = second;
+        array[g + 1] = first;
       }
-  
     }
-  return array;
+
   }
-  
-  
-  console.log(sort([0, 5, 2, 6, 1, -2, 13], function (a, b) {
-    return a > b;
-  }));
+  return array;
+}
+
+
+console.log(sort([0, 5, 2, 6, 1, -2, 13], function (a, b) {
+  return a > b;
+}));
 
 /**
  * Написать свою функцию Object.keys
  */
 function objectKeys(obj) {
   let array = [];
- for (let key in obj) {
-   array.push(key);
- }
- return array
+  for (let key in obj) {
+    array.push(key);
+  }
+  return array
 }
 
-console.log(objectKeys({number: 1, name: 'Ilya', age: 27}));
+console.log(objectKeys({
+  number: 1,
+  name: 'Ilya',
+  age: 27
+}));
 
 /**
  * Написать свою функцию Object.values
  */
-function objectValues(obj){
+function objectValues(obj) {
   let array = [];
-  for (let key in obj){
+  for (let key in obj) {
     array.push(obj[key]);
   }
   return array
 
 }
 
-console.log(objectValues({number: 1, name: 'Ilya', age: 27}));
+console.log(objectValues({
+  number: 1,
+  name: 'Ilya',
+  age: 27
+}));
