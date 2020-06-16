@@ -25,6 +25,7 @@ let table = [{
 
 const tableItem = document.createElement('table');
 tableItem.setAttribute('id', 'app');
+document.body.style.background = '#bbb'
 tableItem.style.cssText = 'width: 1000px; border: 1px solid black; font-family: sans-serif;';
 document.body.prepend(tableItem);
 
